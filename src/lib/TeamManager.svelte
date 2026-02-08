@@ -42,6 +42,7 @@
 </script>
 
 <div class="teams">
+  <Link to="/manager/add">Add Team</Link>
   {#if $teams.length}
     <div class="team-grid">
       {#each $teams as team}
