@@ -40,6 +40,12 @@ export interface Timeout {
   team: Team;
 }
 
+export interface TeamShort {
+  name: string;
+  slug: string;
+  logoUrl: string;
+}
+
 export interface MatchPlayer extends Player {
   isWinner: boolean;
   score: number;
