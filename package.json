@@ -17,5 +17,10 @@
     "svelte-check": "^4.3.4",
     "typescript": "~5.9.3",
     "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "debounce": "^3.0.0",
+    "firebase": "^12.9.0",
+    "svelte-routing": "^2.13.0"
   }
 }
