@@ -5,6 +5,12 @@
 
   import UpdateScoreboard from "./lib/UpdateScoreboard.svelte";
   import Login from "./lib/Login.svelte";
+  import Matchup from "./lib/Matchup.svelte";
+  import VersusScreen from "./lib/VersusScreen.svelte";
+  import Scoreboard from "./lib/Scoreboard.svelte";
+  import Leaderboard from "./lib/Leaderboard.svelte";
+  import TeamManager from "./lib/TeamManager.svelte";
+
   let isLoggedIn: boolean | null;
   let url: string = "";
 
@@ -17,9 +23,14 @@
   <main>
     {#if isLoggedIn}
       <Route path="/" component={UpdateScoreboard} />
+      <Route path="/manager" component={TeamManager} />
     {:else}
       <Route path="/" component={Login} />
     {/if}
+    <Route path="/matchup" component={Matchup} />
+    <Route path="/versus" component={VersusScreen} />
+    <Route path="/scoreboard" component={Scoreboard} />
+    <Route path="/leaderboard" component={Leaderboard} />
   </main>
 </Router>
 
