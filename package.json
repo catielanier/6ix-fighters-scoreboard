@@ -21,6 +21,7 @@
   "dependencies": {
     "debounce": "^3.0.0",
     "firebase": "^12.9.0",
-    "svelte-routing": "^2.13.0"
+    "svelte-routing": "^2.13.0",
+    "svelte-select": "^5.8.3"
   }
 }

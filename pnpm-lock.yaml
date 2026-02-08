@@ -17,6 +17,9 @@ importers:
       svelte-routing:
         specifier: ^2.13.0
         version: 2.13.0
+      svelte-select:
+        specifier: ^5.8.3
+        version: 5.8.3
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^6.2.1
@@ -407,6 +410,15 @@ packages:
 
   '@firebase/webchannel-wrapper@1.0.5':
     resolution: {integrity: sha512-+uGNN7rkfn41HLO0vekTFhTxk61eKa8mTpRGLO0QSqlQdKvIoGAvLp3ppdVIWbTGYJWM6Kp0iN+PjMIOcnVqTw==}
+
+  '@floating-ui/core@1.7.4':
+    resolution: {integrity: sha512-C3HlIdsBxszvm5McXlB8PeOEWfBhcGBTZGkGlWc2U0KFY5IwG5OQEuQ8rq52DZmcHDlPLd+YFBK+cZcytwIFWg==}
+
+  '@floating-ui/dom@1.7.5':
+    resolution: {integrity: sha512-N0bD2kIPInNHUHehXhMke1rBGs1dwqvC9O9KYMyyjK7iXt7GAhnro7UlcuYcGdS/yYOlq0MAVgrow8IbWJwyqg==}
+
+  '@floating-ui/utils@0.2.10':
+    resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
   '@grpc/grpc-js@1.9.15':
     resolution: {integrity: sha512-nqE7Hc0AzI+euzUwDAy0aY5hCp10r734gMGRdU+qOPX0XSceI2ULrcXB5U2xSc5VkWwalCj4M7GzCAygZl2KoQ==}
@@ -803,8 +815,14 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: '>=5.0.0'
 
+  svelte-floating-ui@1.5.8:
+    resolution: {integrity: sha512-dVvJhZ2bT+kQDHlE4Lep8t+sgEc0XD96fXLzAi2DDI2bsaegBbClxXVNMma0C2WsG+n9GJSYx292dTvA8CYRtw==}
+
   svelte-routing@2.13.0:
     resolution: {integrity: sha512-/NTxqTwLc7Dq306hARJrH2HLXOBtKd7hu8nxgoFDlK0AC4SOKnzisiX/9m8Uksei1QAWtlAEdF91YphNM8iDMg==}
+
+  svelte-select@5.8.3:
+    resolution: {integrity: sha512-nQsvflWmTCOZjssdrNptzfD1Ok45hHVMTL5IHay5DINk7dfu5Er+8KsVJnZMJdSircqtR0YlT4YkCFlxOUhVPA==}
 
   svelte@5.50.0:
     resolution: {integrity: sha512-FR9kTLmX5i0oyeQ5j/+w8DuagIkQ7MWMuPpPVioW2zx9Dw77q+1ufLzF1IqNtcTXPRnIIio4PlasliVn43OnbQ==}
@@ -1301,6 +1319,17 @@ snapshots:
 
   '@firebase/webchannel-wrapper@1.0.5': {}
 
+  '@floating-ui/core@1.7.4':
+    dependencies:
+      '@floating-ui/utils': 0.2.10
+
+  '@floating-ui/dom@1.7.5':
+    dependencies:
+      '@floating-ui/core': 1.7.4
+      '@floating-ui/utils': 0.2.10
+
+  '@floating-ui/utils@0.2.10': {}
+
   '@grpc/grpc-js@1.9.15':
     dependencies:
       '@grpc/proto-loader': 0.7.15
@@ -1696,7 +1725,16 @@ snapshots:
     transitivePeerDependencies:
       - picomatch
 
+  svelte-floating-ui@1.5.8:
+    dependencies:
+      '@floating-ui/core': 1.7.4
+      '@floating-ui/dom': 1.7.5
+
   svelte-routing@2.13.0: {}
+
+  svelte-select@5.8.3:
+    dependencies:
+      svelte-floating-ui: 1.5.8
 
   svelte@5.50.0:
     dependencies:
