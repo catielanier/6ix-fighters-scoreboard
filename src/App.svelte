@@ -10,6 +10,8 @@
   import Scoreboard from "./lib/Scoreboard.svelte";
   import Leaderboard from "./lib/Leaderboard.svelte";
   import TeamManager from "./lib/TeamManager.svelte";
+  import AddTeam from "./lib/AddTeam.svelte";
+  import EditTeam from "./lib/EditTeam.svelte";
 
   let isLoggedIn: boolean | null;
   let url: string = "";
@@ -24,6 +26,8 @@
     {#if isLoggedIn}
       <Route path="/" component={UpdateScoreboard} />
       <Route path="/manager" component={TeamManager} />
+      <Route path="/manager/add" component={AddTeam} />
+      <Route exact path="/manager/edit/:slug" component={EditTeam} />
     {:else}
       <Route path="/" component={Login} />
     {/if}
