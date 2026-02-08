@@ -48,6 +48,7 @@
 </script>
 
 <div class="team">
+  <h1>Add Team</h1>
   {#if error}
     <p class="error"><span>Error:</span> {error}</p>
   {/if}
