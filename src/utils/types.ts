@@ -42,6 +42,7 @@ export interface Timeout {
 
 export interface MatchPlayer extends Player {
   isWinner: boolean;
+  score: number;
 }
 
 export interface IScoreboard {
